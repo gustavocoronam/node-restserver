@@ -12,9 +12,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 // =============================================
-
+// SE INICIA EL EXPRESS
 const app = express();
-
+// SE USA EL BODY PARSER
 const bodyParser = require('body-parser');
 
 // parse application/x-www-form-urlencoded
@@ -24,8 +24,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // =============================================
-// IMPORTACIÓN DEL USUARIO.JS --------> DESPUÉS DE LAS LIBRERÍAS
-  app.use (require('./routes/usuario'));
+// CONFIGURACIÓN GLOBAL DE LAS RUTAS --------> DESPUÉS DE LAS LIBRERÍAS
+  app.use (require('./routes/index'));
 // =============================================
 
 // ===============================================================================
